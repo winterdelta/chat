@@ -133,9 +133,10 @@
 	justify-content: center;
 	align-items: center;
 	height: 70vh;
-  width: 100vw;
+	width: 100vw;
 	flex-direction: column;
-  border: 1px solid white;
+	border: 1px solid white;
+	overflow: scroll;
 }
 
 .thread div {

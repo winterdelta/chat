@@ -13,13 +13,13 @@ const fetchComments = async (req, res) => {
           q.Match(
             // query index
             q.Index('all_comments') // specify source
-          )
+          ),
+          { size: 300 }
         ),
         ref => q.Get(ref) // lookup each result by its reference
       )
     )
     // ok
-    console.log(JSON.stringify(comments))
     res.status(200).json(comments.data)
   } catch (e) {
     // something went wrong
